@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Espace MB — Massothérapeute Avon / Fontainebleau (77)</title>
+<meta name="description" content="Marielle, massothérapeute à Avon près de Fontainebleau (77). Massage Zéro Tension, massage sportif, soulagement des tensions, récuperation musculaire. Prise de RDV en ligne.">
+<meta name="robots" content="index, follow">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:     #fffdf8;
+  --bg2:    #fdf8ef;
+  --bg3:    #f8f0e0;
+  --border: #e8d8b8;
+  --text:   #2a2010;
+  --muted:  #a09060;
+  --accent: #d4a030;
+  --adark:  #b07820;
+  --alight: #fef6e0;
+  --hero1:  #e8c87a;
+  --hero2:  #f0d890;
+  --serif:  'Raleway',sans-serif;
+  --body:   'Lato',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--body);font-weight:300;line-height:1.75;font-size:16px}
+a{color:inherit;text-decoration:none}
+
+/* OVERLAYS */
+.ov{display:none;position:fixed;inset:0;z-index:600;background:var(--bg);overflow-y:auto}
+.ov.open{display:block}
+.ovh{background:#c8a030;padding:1.2rem 3rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10}
+.ovh-logo{font-family:var(--serif);font-size:1.1rem;font-weight:600;letter-spacing:.15em;color:#fff}
+.ovh-logo span{color:var(--accent)}
+.ovcl{background:none;border:1px solid rgba(255,255,255,.35);color:#fff;font-size:1rem;width:36px;height:36px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.2s}
+.ovcl:hover{border-color:var(--accent);color:var(--accent)}
+.ovc{max-width:880px;margin:0 auto;padding:4rem 3rem}
+
+/* HELPERS */
+.lbl{font-family:var(--serif);font-size:1.2rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:.5rem}
+.stitle{font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.6rem);font-weight:300;color:var(--text);line-height:1.25}
+.bar{width:44px;height:2px;background:var(--accent);margin:1rem 0 2.5rem}
+.badge{display:inline-block;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;background:var(--alight);color:var(--adark);border:1px solid var(--border);padding:.3rem .8rem;margin-bottom:1.2rem}
+.warn{background:#fffbf0;border-left:3px solid var(--accent);padding:1rem 1.2rem;margin-bottom:1.2rem;font-size:.9rem;color:var(--text)}
+.trow{display:flex;justify-content:space-between;padding:.8rem 0;border-bottom:1px solid var(--border);font-size:.95rem}
+.trow:first-of-type{border-top:1px solid var(--border)}
+.tprice{font-family:var(--serif);font-size:1.05rem;font-weight:600;color:var(--adark)}
+.paynote{font-size:.88rem;color:var(--muted);margin-top:.8rem;font-style:italic}
+.btn{display:inline-block;background:var(--accent);color:#fff;font-family:var(--serif);font-size:.82rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;padding:.9rem 2rem;transition:background .2s;cursor:pointer;border:none}
+.btn:hover{background:var(--adark)}
+.dg{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.di{width:100%;aspect-ratio:4/3;background:var(--bg3);display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:16px}
+.di svg{width:48%;height:48%}
+.di img{width:100%;height:100%;object-fit:cover}
+.dt p{font-size:1.05rem;line-height:1.9;margin-bottom:1rem;color:var(--text)}
+.dt ul{list-style:none;margin:.5rem 0 1rem}
+.dt ul li{font-size:1rem;padding:.4rem 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.6rem}
+.dt ul li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0}
+.qsg{display:grid;grid-template-columns:260px 1fr;gap:4rem;align-items:start}
+.qsp{width:100%;aspect-ratio:3/4;background:var(--bg3);display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:16px}
+.qsp svg{width:48%;height:48%;stroke:var(--accent);fill:none;stroke-width:1.2}
+.qsp img{width:100%;height:100%;object-fit:cover}
+.qst p{font-size:1.05rem;line-height:1.95;margin-bottom:1.4rem;color:var(--text)}
+.legal h2{font-family:var(--serif);font-size:1rem;font-weight:600;color:var(--text);margin:2rem 0 .6rem;text-transform:uppercase;letter-spacing:.08em}
+.legal p{font-size:.9rem;line-height:1.85;margin-bottom:1rem}
+.legal ul{margin:.5rem 0 1rem 1.5rem}
+.legal ul li{font-size:.9rem;line-height:1.75;margin-bottom:.3rem}
+
+/* NAVIGATION */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,253,248,.96);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 3rem;height:70px}
+.nlogo{font-family:var(--serif);font-size:1.4rem;font-weight:600;letter-spacing:.15em;color:var(--text);cursor:pointer}
+.nlogo span{color:var(--accent)}
+.nlinks{display:flex;align-items:center;list-style:none}
+.nlinks li{position:relative}
+.nlinks>li>a,.nlinks>li>button{display:block;padding:0 1rem;height:70px;line-height:70px;font-family:var(--serif);font-size:.8rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--text);transition:color .2s;background:none;border:none;cursor:pointer;white-space:nowrap}
+.nlinks>li>a:hover,.nlinks>li>button:hover{color:var(--accent)}
+.nlinks .rdv>a{background:var(--accent);color:#fff;padding:0 1.4rem;transition:background .2s}
+.nlinks .rdv>a:hover{background:var(--adark);color:#fff}
+.dd{position:absolute;top:70px;left:0;background:#fff;border:1px solid var(--border);border-top:2px solid var(--accent);min-width:230px;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .2s,transform .2s;z-index:300}
+.nlinks li:hover .dd{opacity:1;pointer-events:auto;transform:translateY(0)}
+.dd button{display:block;width:100%;padding:.8rem 1.2rem;font-family:var(--serif);font-size:.82rem;letter-spacing:.07em;text-transform:uppercase;color:var(--text);border:none;border-bottom:1px solid var(--border);background:none;text-align:left;cursor:pointer;transition:background .15s,color .15s}
+.dd button:last-child{border-bottom:none}
+.dd button:hover{background:var(--alight);color:var(--adark)}
+.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+.hbg span{display:block;width:24px;height:2px;background:var(--text)}
+
+/* HERO */
+.hero{margin-top:70px;height:calc(100vh - 70px);min-height:520px;display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(150deg,#e8c060 0%,#f5d878 50%,#e8c060 100%);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 60% 40%,rgba(255,255,255,.18) 0%,transparent 65%)}
+.herc{position:relative;z-index:2;padding:2rem}
+.hertag{font-family:var(--serif);font-size:.88rem;letter-spacing:.28em;text-transform:uppercase;color:#7a5800;margin-bottom:1.5rem}
+.herh{font-family:var(--serif);font-size:clamp(2.2rem,5vw,4rem);font-weight:300;color:#2a1a00;line-height:1.2;margin-bottom:1rem;max-width:680px}
+.herh strong{font-weight:600;color:#7a4a00}
+.hersub{color:#4a3800;font-size:1.05rem;margin-bottom:2.5rem;max-width:540px;line-height:1.75}
+.herbtn{display:inline-block;background:#7a4a00;color:#fff;font-family:var(--serif);font-size:.82rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:1rem 2.8rem;border:1px solid var(--accent);transition:background .25s,color .25s}
+.herbtn:hover{background:transparent;color:#7a4a00;border-color:#7a4a00}
+
+/* SERVICES */
+.services{background:var(--bg);text-align:center;padding:5.5rem 3rem}
+.sg{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;max-width:960px;margin:0 auto}
+.bar-c{margin:1rem auto 3rem}
+.sc{text-align:center;cursor:pointer;transition:transform .25s}
+.sc:hover{transform:translateY(-5px)}
+.sph{width:100%;aspect-ratio:1;background:var(--bg2);margin-bottom:1.2rem;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:50%;box-shadow:0 4px 12px rgba(0,0,0,0.08);transition:transform 0.3s ease,box-shadow 0.3s ease}
+.sph svg{width:54%;height:54%}
+.sph img{width:100%;height:100%;object-fit:cover}
+.sc:hover .sph{transform:translateY(-5px);box-shadow:0 8px 20px rgba(212,160,48,0.25)}
+.sc:hover .sph img{transform:scale(1.05)}
+.sn{font-family:var(--serif);font-size:1rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text);margin-bottom:.4rem}
+.ss{font-size:1rem;color:var(--muted);margin-bottom:.9rem}
+.sl{font-family:var(--serif);font-size:.9rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);border-bottom:1px solid var(--accent);padding-bottom:1px}
+
+/* ABOUT */
+.about{background:var(--bg2);padding:5.5rem 3rem}
+.abtin{max-width:800px;margin:0 auto;display:grid;grid-template-columns:180px 1fr;gap:4rem;align-items:center}
+.acirc{width:150px;height:150px;border-radius:50%;background:var(--bg3);display:flex;align-items:center;justify-content:center;border:4px solid #fff;box-shadow:0 4px 24px rgba(0,0,0,.08);margin:0 auto;cursor:pointer;transition:box-shadow .2s;overflow:hidden}
+.acirc:hover{box-shadow:0 6px 30px rgba(212,160,48,.3)}
+.acirc svg{width:54px;height:54px;stroke:var(--accent);fill:none;stroke-width:1.2}
+.acirc img{width:100%;height:100%;object-fit:cover}
+.atext{font-size:.95rem;line-height:1.9;font-style:italic;color:var(--text)}
+.atext strong{font-style:normal;font-weight:600}
+.amore{display:inline-block;margin-top:1rem;font-family:var(--serif);font-size:.82rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);border-bottom:1px solid var(--accent);padding-bottom:1px;cursor:pointer}
+
+/* CARROUSEL */
+.testi{background:#f5d878;color:#2a1a00;text-align:center;padding:5.5rem 3rem}
+.testil{font-family:var(--serif);font-size:1.2rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#7a5000;margin-bottom:3rem}
+.car{max-width:720px;margin:0 auto;min-height:200px}
+.csl{display:none;animation:cfi .5s ease}
+.csl.active{display:block}
+@keyframes cfi{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.cq{font-family:var(--serif);font-size:clamp(0.9rem,2vw,1.2rem);font-weight:300;font-style:italic;line-height:1.85;color:#3a2800;margin-bottom:1.5rem}
+.ca{font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:#7a5000}
+.cdots{display:flex;justify-content:center;gap:.6rem;margin-top:2.5rem;flex-wrap:wrap}
+.dot{width:8px;height:8px;border-radius:50%;background:rgba(0,0,0,.18);border:none;cursor:pointer;padding:0;transition:background .2s,transform .2s}
+.dot.active{background:#7a5000;transform:scale(1.3)}
+.carrows{display:flex;justify-content:center;gap:1rem;margin-top:1.5rem}
+.cbtn{width:40px;height:40px;border-radius:50%;border:1px solid rgba(0,0,0,.2);background:transparent;color:#5a4000;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;transition:.2s}
+.cbtn:hover{border-color:#7a5000;color:#7a5000}
+
+/* RDV */
+.rdvs{background:var(--bg3);padding:5.5rem 3rem;scroll-margin-top:70px}
+.rdvin{max-width:680px;margin:0 auto}
+.form{display:flex;flex-direction:column;gap:1.1rem}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
+.fg{display:flex;flex-direction:column;gap:.45rem}
+.fg label{font-family:var(--serif);font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.req{color:var(--accent)}
+.fg input,.fg textarea,.fg select{background:#fff;border:1px solid var(--border);padding:.8rem 1rem;font-family:var(--body);font-size:.95rem;color:var(--text);outline:none;transition:border-color .2s;resize:vertical;border-radius:0}
+.fg input:focus,.fg textarea:focus,.fg select:focus{border-color:var(--accent)}
+.fg textarea{min-height:90px}
+.fg.err input,.fg.err textarea,.fg.err select{border-color:#d04040;background:#fff8f8}
+.errmsg{display:none;font-size:.82rem;color:#d04040;margin-top:.2rem}
+.fg.err .errmsg{display:block}
+.bsub{background:var(--accent);color:#fff;border:none;padding:.95rem 2.4rem;font-family:var(--serif);font-size:.82rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;cursor:pointer;transition:background .2s;align-self:flex-start;margin-top:.5rem}
+.bsub:hover{background:var(--adark)}
+.bsub:disabled{opacity:.7;cursor:not-allowed}
+.fconf{display:none;background:#f0f8f0;border:1px solid #90c890;padding:1.5rem;text-align:center;color:#2a6a2a;font-size:.95rem;line-height:1.7;margin-top:1rem}
+.fconf strong{display:block;font-size:1.05rem;margin-bottom:.4rem}
+
+/* CONTACT */
+.cons{background:var(--bg2);padding:5.5rem 3rem}
+.conin{max-width:700px;margin:0 auto}
+.cilist{display:flex;flex-direction:column;gap:1.2rem;margin-bottom:2rem}
+.ci{display:flex;align-items:flex-start;gap:1rem;font-size:.95rem}
+.ci svg{width:17px;height:17px;stroke:var(--accent);fill:none;stroke-width:1.8;stroke-linecap:round;flex-shrink:0;margin-top:3px}
+.ci a{color:var(--accent)}
+.map-container{margin-top:1.5rem;border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.map-note{font-size:.9rem;color:var(--muted);margin-top:.6rem;font-style:italic;text-align:center}
+
+/* FOOTER */
+footer{background:#e8c060;border-top:1px solid rgba(0,0,0,.08);padding:2.5rem 3rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.fl{font-family:var(--serif);font-size:1.1rem;font-weight:600;letter-spacing:.15em;color:#2a1a00}
+.fl span{color:#7a4a00}
+.fc{font-size:.85rem;color:#5a4000}
+.flinks{display:flex;gap:1.5rem;font-size:.82rem;color:#5a4000}
+.flinks span{cursor:pointer;transition:color .2s}
+.flinks span:hover{color:#7a4a00}
+
+/* MOBILE */
+@media(max-width:860px){
+  nav{padding:0 1.5rem}
+  .nlinks{display:none}
+  .hbg{display:flex}
+  .nlinks.open{display:flex;flex-direction:column;position:fixed;top:70px;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--border);padding:.5rem 0;z-index:200;max-height:calc(100vh - 70px);overflow-y:auto}
+  .nlinks.open>li>a,.nlinks.open>li>button{height:auto;line-height:1;padding:.95rem 1.5rem}
+  .dd{position:static;opacity:1;pointer-events:auto;transform:none;border:none;border-top:1px solid var(--border)}
+  .dd button{padding:.8rem 2rem}
+  .services,.about,.rdvs,.cons{padding:3.5rem 1.5rem}
+  .sg{grid-template-columns:1fr;gap:1.5rem;max-width:300px;margin:0 auto}
+  .abtin{grid-template-columns:1fr;text-align:center;gap:2rem}
+  .about .bar{margin:1rem auto 2.5rem}
+  .fr{grid-template-columns:1fr}
+  footer{flex-direction:column;text-align:center;padding:2rem 1.5rem}
+  .qsg{grid-template-columns:1fr;gap:2rem}
+  .dg{grid-template-columns:1fr;gap:2rem}
+  .ovc{padding:2.5rem 1.5rem}
+  .ovh{padding:1.2rem 1.5rem}
+  .sph{width:80%;margin-left:auto;margin-right:auto}
+  .cq{font-size:0.9rem;padding:0 0.8rem}
+  .map-container iframe{height:250px}
+  .di,.qsp{margin-bottom:1rem}
+  img{max-width:100%;height:auto}
+  
+  /* Fallback images */
+  img[src=""] { display: none; }
+  .sph img, .di img, .qsp img, .acirc img {
+    background: linear-gradient(135deg, var(--bg2) 0%, var(--bg3) 100%);
+  }
+}
+
+/* Desktop */
+@media(min-width:861px){
+  .map-container iframe{height:300px}
+}
+</style>
+</head>
+<body>
+
+<!-- PAGE QUI SUIS-JE -->
+<div class="ov" id="pg-qs">
+<div class="ovh"><span class="ovh-logo">ESPACE <span>MB</span></span><button class="ovcl" id="c-qs">&#x2715;</button></div>
+<div class="ovc">
+  <div class="qsg">
+    <div class="qsp">
+      <img src="quisuisje.png" alt="Marielle - Massothérapeute" onerror="this.style.display='none';this.parentElement.innerHTML='<div style=\'font-size:80px;\'>👩‍⚕️</div>'">
+    </div>
+    <div class="qst">
+      <div class="lbl">A propos</div>
+      <h1 style="font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.6rem);font-weight:300;color:var(--text);margin-bottom:.8rem">Qui suis-je ?</h1>
+      <div class="bar"></div>
+      <p>J'ai débuté la massothérapie en 2019 avec une idée claire : proposer un travail efficace sur le corps, loin des massages standardisés ou d'institut.</p>
+      <p>Le toucher a toujours été naturel pour moi, ce qui me permet d'identifier rapidement les zones de tension et d'adapter chaque séance en fonction de ce que votre corps a besoin.</p>
+      <p>Anciennement Coach de Pilates, le mouvement et le corps font partie de mon quotidien depuis plus de 10 ans : musculation, calisthenics, escalade, yoga, tennis de table, natation...</p>
+      <p>Atteinte d'une scoliose à double courbure (thoracique et lombaire), accompagnée de douleurs, d'une cruralgie et d'arthrose lombaire, j'ai dû comprendre et écouter mon corps différemment.</p>
+      <p>C'est en combinant travail corporel et massages réguliers que j'ai réussi à soulager ces tensions et améliorer ma qualité de vie.</p>
+      <p>Au-delà du travail physique, j'accorde aussi une place importante à l'écoute, car les tensions ne sont pas uniquement mécaniques.</p>
+      <p>J'accompagne aujourd'hui des profils variés : personnes sujettes aux douleurs chroniques, sportifs en recherche de récupération, ou simplement des corps trop sollicités au quotidien.</p>
+      <p style="font-weight:400">Mon objectif est de vous aider à retrouver un corps plus détendu, plus léger, et que vous puissiez continuer à pratiquer vos activités sans douleur.</p>
+      <span class="btn" id="rdv-qs" style="margin-top:2rem">Prendre rendez-vous</span>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- PAGE ZERO TENSION -->
+<div class="ov" id="pg-zt">
+<div class="ovh"><span class="ovh-logo">ESPACE <span>MB</span></span><button class="ovcl" id="c-zt">&#x2715;</button></div>
+<div class="ovc">
+  <div class="lbl">Soin signature</div>
+  <h1 style="font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.6rem);font-weight:300;color:var(--text);margin-bottom:.5rem">Massage Zero Tension</h1>
+  <div class="bar"></div>
+  <div class="dg">
+    <div class="di">
+      <img src="massagezerotension.jpg" alt="Massage Zero Tension" onerror="this.style.display='none';this.parentElement.innerHTML='<div style=\'font-size:48px;\'>💆‍♀️</div>'">
+    </div>
+    <div class="dt">
+      <span class="badge">Clientele feminine</span>
+      <p>A l'écoute de votre corps, je vous propose un massage sur mesure pour vous soulager des tensions accumulées et des zones trop contractées.</p>
+      <p>Contrairement à un massage relaxant classique, il ne se contente pas d'apaiser : il traite réellement les tensions et élimine les noeuds. Et à l'inverse d'un massage sportif ou deep tissue, il reste agréable, doux et enveloppant.</p>
+      <p>Le massage Zero Tension, c'est l'art d'allier détente profonde et relâchement musculaire. Une experience qui libère le corps et apaise l'esprit, avec un seul objectif : repartir sans tension.</p>
+      <div style="margin-top:1.5rem">
+        <p style="font-family:var(--serif);font-size:.78rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:.8rem">Tarifs</p>
+        <div class="trow"><span>Dos 45 min</span><span class="tprice">45 &euro;</span></div>
+        <div class="trow"><span>Dos 60 min</span><span class="tprice">60 &euro;</span></div>
+        <div class="trow"><span>Dos + jambes 60 min</span><span class="tprice">65 &euro;</span></div>
+      </div>
+      <p class="paynote">Règlement par chèque, espèce ou virement uniquement.</p>
+      <span class="btn" id="rdv-zt" style="
+      <span class="btn" id="rdv-zt" style="margin-top:1.5rem">Réserver une seance</span>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- PAGE SPORTIF -->
+<div class="ov" id="pg-sp">
+<div class="ovh"><span class="ovh-logo">ESPACE <span>MB</span></span><button class="ovcl" id="c-sp">&#x2715;</button></div>
+<div class="ovc">
+  <div class="lbl">Performance et récuperation</div>
+  <h1 style="font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.6rem);font-weight:300;color:var(--text);margin-bottom:.5rem">Massage Sportif</h1>
+  <div class="bar"></div>
+  <div class="dg">
+    <div class="di">
+      <img src="massagesportif.png" alt="Massage Sportif" onerror="this.style.display='none';this.parentElement.innerHTML='<div style=\'font-size:48px;\'>🏃‍♂️</div>'">
+    </div>
+    <div class="dt">
+      <span class="badge">Clientele mixte</span>
+      <div class="warn">Tout comportement deplacé ou demande inappropriée entrainera l'arrêt immédiat de la séance et sera signalé. Merci de respecter ce cadre professionnel.</div>
+      <p>Le massage sportif est une technique spécialement concue pour toute personne pratiquant une activité physique régulière, athlète professionnel ou amateur. Il est a visée musculaire.</p>
+      <p style="font-size:.82rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin:.5rem 0 .3rem">L'objectif principal</p>
+      <ul>
+        <li>Optimiser les performances sportives</li>
+        <li>Prevenir les blessures</li>
+        <li>Accélérer la recuperation</li>
+        <li>Ameliorer l'état général des muscles</li>
+      </ul>
+      <p>Il est adapté en fonction de la discipline sportive, des objectifs et des besoins individuels.</p>
+      <div style="margin-top:1.5rem">
+        <p style="font-family:var(--serif);font-size:.78rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:.8rem">Tarifs</p>
+        <div class="trow"><span>60 min</span><span class="tprice">65 &euro;</span></div>
+        <div class="trow"><span>45 min</span><span class="tprice">50 &euro;</span></div>
+      </div>
+      <p class="paynote">Règlement par chèque, espèce ou virement uniquement.</p>
+      <span class="btn" id="rdv-sp" style="margin-top:1.5rem">Reserver une seance</span>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- PAGE MENTIONS -->
+<div class="ov" id="pg-ml">
+<div class="ovh"><span class="ovh-logo">ESPACE <span>MB</span></span><button class="ovcl" id="c-ml">&#x2715;</button></div>
+<div class="ovc"><div class="legal">
+  <h1 style="font-family:var(--serif);font-size:2rem;font-weight:300;color:var(--text);margin-bottom:1rem">Mentions legales</h1>
+  <div class="bar"></div>
+  <h2>Informations editoriales</h2>
+  <p>Site : www.espace-mb.com &bull; Proprietaire : ESPACE MB &bull; N SIRET : 87963173700019<br>
+  Adresse : 8 allee des lilas 77210 AVON &bull; Tel : 07 67 20 55 36<br>
+  Responsable de publication : Marielle BOUSSALMI &ndash; marielle.bouss@outlook.fr<br>
+  Webmaster et createur du site : Marielle BOUSSALMI / ESPACE MB</p>
+  <h2>Conditions generales d'utilisation</h2>
+  <p>L'utilisation du site implique l'acceptation pleine et entiere des conditions generales d'utilisation. Ces conditions sont susceptibles d'etre modifiees a tout moment.</p>
+  <h2>Limitations de responsabilite</h2>
+  <p>ESPACE MB ne pourra etre tenue responsable des dommages directs et indirects causes au materiel de l'utilisateur lors de l'acces au site.</p>
+  <h2>Politique de confidentialite</h2>
+  <p>Aucune information personnelle n'est collectee a votre insu ni cedee a des tiers.<br>
+  Donnees collectees : Nom, prenom, email, telephone. Utilisation : prise de rendez-vous. Duree de stockage : indefiniment.</p>
+</div></div>
+</div>
+
+<!-- PAGE CGV -->
+<div class="ov" id="pg-cgv">
+<div class="ovh"><span class="ovh-logo">ESPACE <span>MB</span></span><button class="ovcl" id="c-cgv">&#x2715;</button></div>
+<div class="ovc"><div class="legal">
+  <h1 style="font-family:var(--serif);font-size:2rem;font-weight:300;color:var(--text);margin-bottom:1rem">Conditions Generales de Vente</h1>
+  <div class="bar"></div>
+  <h2>Champ d'application</h2>
+  <p>Les presentes conditions s'appliquent a toutes les utilisations du Site ESPACE MB par des personnes physiques ou morales majeures.</p>
+  <h2>Tarifs</h2>
+  <p>Les tarifs sont librement fixes par le Vendeur. Les prix sont en euros TTC.</p>
+  <h2>Modalites de paiement</h2>
+  <ul><li>Cheque</li><li>Espece</li><li>Virement</li></ul>
+  <h2>Propriete intellectuelle</h2>
+  <p>Toute reproduction sans consentement de l'auteur est illicite. Le Vendeur conserve l'integralite des droits d'auteur et de propriete intellectuelle.</p>
+  <h2>Droit applicable</h2>
+  <p>Les presentes conditions sont soumises au droit francais. Les tribunaux francais sont competents en cas de litige.</p>
+</div></div>
+</div>
+
+<!-- NAVIGATION -->
+<nav>
+  <span class="nlogo" id="nav-home">ESPACE <span>MB</span></span>
+  <button class="hbg" id="hamburger"><span></span><span></span><span></span></button>
+  <ul class="nlinks" id="navLinks">
+    <li><a href="#">Accueil</a></li>
+    <li>
+      <a href="#services">Massages</a>
+      <div class="dd">
+        <button id="n-zt">Massage Zero Tension</button>
+        <button id="n-sp">Massage Sportif</button>
+      </div>
+    </li>
+    <li><a href="https://espacemb-formation.systeme.io/" target="_blank" rel="noopener">Formation Massage</a></li>
+    <li><button id="n-qs">Qui suis-je</button></li>
+    <li class="rdv"><a href="#rdv">Prendre RDV</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="herc">
+    <p class="hertag">Massage &mdash; Avon / Fontainebleau 77</p>
+    <h1 class="herh"><strong>Libérez votre corps</strong><br>par le massage.</h1>
+    <p class="hersub">Je vous aide à soulager les tensions, récupérer plus vite et retrouver un corps plus fonctionnel.</p>
+    <a href="#rdv" class="herbtn">Prendre RDV</a>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="lbl">Ce que je propose</div>
+  <h2 class="stitle">Services</h2>
+  <div class="bar bar-c"></div>
+  <div class="sg">
+    <div class="sc" id="c-zt2">
+      <div class="sph">
+        <img src="zerotension.png" alt="Massage Zero Tension" onerror="this.style.display='none';this.parentElement.innerHTML='<div style=\'font-size:48px;\'>💆‍♀️</div>'">
+      </div>
+      <p class="sn">Massage Zero Tension</p>
+      <p class="ss">Détente profonde &amp; relâchement</p>
+      <span class="sl">Voir</span>
+    </div>
+    <div class="sc" id="c-sp2">
+      <div class="sph">
+        <img src="sportif.png" alt="Massage Sportif" onerror="this.style.display='none';this.parentElement.innerHTML='<div style=\'font-size:48px;\'>🏃‍♂️</div>'">
+      </div>
+      <p class="sn">Massage Sportif</p>
+      <p class="ss">Récupération &amp; performance</p>
+      <span class="sl">Voir</span>
+    </div>
+    <div class="sc" id="c-form">
+      <div class="sph">
+        <img src="formation.png" alt="Formation massage" onerror="this.style.display='none';this.parentElement.innerHTML='<div style=\'font-size:48px;\'>📚</div>'">
+      </div>
+      <p class="sn">Formation en ligne</p>
+      <p class="ss">Massage Zero Tension &mdash; Dos</p>
+      <span class="sl">Voir</span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="apropos">
+  <div class="abtin">
+    <div>
+      <div class="acirc" id="a-photo">
+        <img src="mariellephoto.png" alt="Marielle - Massothérapeute" onerror="this.style.display='none';this.parentElement.innerHTML='<div style=\'font-size:48px;\'>👩‍⚕️</div>'">
+      </div>
+    </div>
+    <div>
+      <div class="lbl">Qui suis-je ?</div>
+      <div class="bar"></div>
+      <p class="atext">Je m'appelle Marielle, massothérapeute depuis 2019. Passionnée de sport, de psychologie et tout ce qui concerne l'humain, mon but a toujours été tourné vers la recherche du bien-être, à la fois physique et mental.</p>
+      <span class="amore" id="a-more">En lire plus &rsaquo;</span>
+    </div>
+  </div>
+</section>
+
+<!-- CARROUSEL -->
+<div class="testi">
+  <p class="testil">Avis des clientes</p>
+  <div class="car" id="carousel"></div>
+  <div class="carrows">
+    <button class="cbtn" id="cprev">&#8592;</button>
+    <button class="cbtn" id="cnext">&#8594;</button>
+  </div>
+  <div class="cdots" id="cdots"></div>
+</div>
+
+<!-- RDV -->
+<section class="rdvs" id="rdv">
+  <div class="rdvin">
+    <div class="lbl">Reservation</div>
+    <h2 class="stitle">Prendre Rendez-Vous</h2>
+    <div class="bar"></div>
+    <form class="form" id="rdvForm" novalidate>
+      <div class="fr">
+        <div class="fg" id="fg-pr"><label>Prenom <span class="req">*</span></label><input type="text" id="f-pr" placeholder="Votre prenom"><span class="errmsg">Champ obligatoire.</span></div>
+        <div class="fg" id="fg-nm"><label>Nom <span class="req">*</span></label><input type="text" id="f-nm" placeholder="Votre nom"><span class="errmsg">Champ obligatoire.</span></div>
+      </div>
+      <div class="fr">
+        <div class="fg" id="fg-dn"><label>Date de naissance <span class="req">*</span></label><input type="date" id="f-dn"><span class="errmsg">Champ obligatoire.</span></div>
+        <div class="fg" id="fg-tl"><label>Telephone <span class="req">*</span></label><input type="tel" id="f-tl" placeholder="06 00 00 00 00"><span class="errmsg">Champ obligatoire.</span></div>
+      </div>
+      <div class="fg" id="fg-em"><label>Email <span class="req">*</span></label><input type="email" id="f-em" placeholder="votre@email.com"><span class="errmsg">Email invalide.</span></div>
+      <div class="fg">
+        <label>Massage souhaite</label>
+        <select id="f-ms">
+          <option value="">Choisir...</option>
+          <option>Massage Zero Tension : Dos 45min (45&euro;)</option>
+          <option>Massage Zero Tension : Dos 60min (60&euro;)</option>
+          <option>Massage Zero Tension : Dos + jambes 60min (65&euro;)</option>
+          <option>Massage Sportif : 60min (65&euro;)</option>
+          <option>Massage Sportif : 45min (50&euro;)</option>
+        </select>
+      </div>
+      <div class="fg"><label>Vos disponibilites (ouvert de 14h a 19h)</label><textarea id="f-dispo" placeholder="Indiquez vos jours et creneaux preferes..."></textarea></div>
+      <div class="fg"><label>Message (facultatif)</label><textarea id="f-msg" placeholder="Questions, informations complementaires..."></textarea></div>
+      <button type="submit" class="bsub" id="rdv-btn">Envoyer la demande</button>
+      <div class="fconf" id="rdv-conf">
+        <strong>Demande envoyée !</strong>
+        Marielle vous contactera très bientôt pour confirmer votre rendez-vous.
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="cons" id="contact">
+  <div class="conin">
+    <div class="lbl">Me contacter</div>
+    <h2 class="stitle">Contact</h2>
+    <div class="bar"></div>
+    <div class="cilist">
+      <div class="ci">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 5.61 5.61l.77-.77a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21 16z"/></svg>
+        <span>Appel ou SMS : <a href="tel:+33767205536">07.67.20.55.36</a></span>
+      </div>
+      <div class="ci">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <span>Mail : <a href="mailto:marielle.bouss@outlook.fr">marielle.bouss@outlook.fr</a></span>
+      </div>
+      <div class="ci">
+        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>8 allee des lilas, 77210 AVON<br><em style="font-size:.88rem;color:var(--muted)">(uniquement sur RDV)</em></span>
+      </div>
+    </div>
+    <div class="map-container">
+      <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px;">
+        <iframe 
+          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=8+all%C3%A9e+des+lilas+77210+Avon&language=fr"
+          style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;" 
+          allowfullscreen="" loading="lazy"
+          title="Espace MB">
+        </iframe>
+      </div>
+      <div style="background:#e8d8b8; padding:0.8rem; text-align:center; border-radius:0 0 12px 12px; margin-top:0;">
+        <a href="https://maps.google.com/maps?q=8+all%C3%A9e+des+lilas+77210+Avon" target="_blank" style="color:var(--adark); font-size:0.85rem;">
+          📍 Ouvrir dans Google Maps
+        </a>
+      </div>
+    </div>
+    <p class="map-note">Stationnement libre et gratuit le long de la forêt.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fl">ESPACE <span>MB</span></div>
+  <p class="fc">2025 - Espace MB</p>
+  <div class="flinks">
+    <span id="f-qs">Qui suis-je</span>
+    <span id="f-ml">Mentions legales</span>
+    <span id="f-cgv">CGV</span>
+  </div>
+</footer>
+
+<script>
+// FONCTIONS MODALES
+function op(id){document.getElementById(id).classList.add('open');document.body.style.overflow='hidden';document.getElementById('navLinks').classList.remove('open')}
+function cl(id){document.getElementById(id).classList.remove('open');document.body.style.overflow=''}
+function goRdv(id){cl(id);setTimeout(function(){document.getElementById('rdv').scrollIntoView({behavior:'smooth'})},300)}
+
+// FERMETURE ESCAPE
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){document.querySelectorAll('.ov.open').forEach(function(p){p.classList.remove('open')});document.body.style.overflow=''}});
+
+// BOUTONS FERMETURE
+document.getElementById('c-qs').onclick=function(){cl('pg-qs')};
+document.getElementById('c-zt').onclick=function(){cl('pg-zt')};
+document.getElementById('c-sp').onclick=function(){cl('pg-sp')};
+document.getElementById('c-ml').onclick=function(){cl('pg-ml')};
+document.getElementById('c-cgv').onclick=function(){cl('pg-cgv')};
+
+// BOUTONS OUVERTURE
+document.getElementById('n-qs').onclick=function(){op('pg-qs')};
+document.getElementById('n-zt').onclick=function(){op('pg-zt')};
+document.getElementById('n-sp').onclick=function(){op('pg-sp')};
+document.getElementById('c-zt2').onclick=function(){op('pg-zt')};
+document.getElementById('c-sp2').onclick=function(){op('pg-sp')};
+document.getElementById('c-form').onclick=function(){window.open('https://espacemb-formation.systeme.io/','_blank')};
+document.getElementById('a-photo').onclick=function(){op('pg-qs')};
+document.getElementById('a-more').onclick=function(){op('pg-qs')};
+document.getElementById('f-qs').onclick=function(){op('pg-qs')};
+document.getElementById('f-ml').onclick=function(){op('pg-ml')};
+document.getElementById('f-cgv').onclick=function(){op('pg-cgv')};
+document.getElementById('rdv-qs').onclick=function(){goRdv('pg-qs')};
+document.getElementById('rdv-zt').onclick=function(){goRdv('pg-zt')};
+document.getElementById('rdv-sp').onclick=function(){goRdv('pg-sp')};
+document.getElementById('nav-home').onclick=function(){window.scrollTo({top:0,behavior:'smooth'})};
+document.getElementById('hamburger').onclick=function(){document.getElementById('navLinks').classList.toggle('open')};
+
+// CARROUSEL
+var avis = [
+  {t:"Je suis allee voir Marielle pour des tensions au niveau du dos et des cervicales. Elle est tout simplement magique : tres a l'ecoute, tres douce et surtout tres professionnelle. Elle a des doigts de fee qui font un bien fou !",a:"V.M &mdash; Avis Google"},
+  {t:"Le sourire de Marielle vous accueille dès qu' elle vous fait rentrer dans son espace massage. L écoute de vos maux est attentive et bienveillante. Une fois installée , c est un moment unique qui commence , instant de détente, et de lacher prise. Marielle est charismatique et très professionnelle. Je recommande vivement.",a:"C.R &mdash; Avis Facebook"},
+  {t:"Massage de qualité, Marielle est à l’écoute, vous pouvez y aller les yeux fermés, vous serez conquise par sa bienveillance et sa délicatesse. J’ai passé un super moment hors du temps 🫠 ",a:"I.M &mdash; Avis Google"},
+  {t:"Un excellent moment de détente et d'apaisement des tensions. Une professionnelle chaleureuse et compétente, à l'écoute, très agréable, pour un massage qui m'a apporté de grands bienfaits, dont la surprise d'une nuit de huit heures, totalement apaisée! Une expérience que je conseille et que je renouvellerai bien vite!",a:"L.W &mdash; Avis Google"},
+  {t:"Je recherchais une bonne masseuse professionnelle. Après avoir lu les avis plus que positifs, je confirme est adorable, très pro, elle vous accueille gentiment, vous écoute.Un massage d'une très grande qualité en profondeur. J’en suis sortis détendu.A refaire sans hésitation ni modération. Encore merci et à bientot.",a:"J.S &mdash; Avis Facebook"},
+  {t:"Je suis venu voir Marielle pour un massage sportif, ayant des douleurs musculaires au mollet suite à une déchirure. Marielle est très agréable, très douce et à l'écoute. Elle m'a même orienté vers un médecin du sport que je suis allé voir. Je reviendrais la voir sans aucun doute +++",a:"S.G. &mdash; Avis Google"},
+  {t:"Massage zéro tension,moment très agréable, Marielle est à l'écoute et c'est bien ressentir les tensions présentes",a:"B.F &mdash; Avis Google"},
+  {t:"Très professionnel et à l’écoute ! Pour ma part premier massage et résultat vivement les prochains ! Je recommande vivement et sans crainte.",a:"G.T &mdash; Avis Facebook"},
+];
+
+document.addEventListener('DOMContentLoaded', function() {
+  var carEl = document.getElementById('carousel');
+  var dtsEl = document.getElementById('cdots');
+  if (!carEl || !dtsEl) return;
+  
+  var cur = 0;
+  var tmr;
+  
+  carEl.innerHTML = '';
+  dtsEl.innerHTML = '';
+  
+  avis.forEach(function(a, i) {
+    var s = document.createElement('div');
+    s.className = 'csl' + (i === 0 ? ' active' : '');
+    s.innerHTML = '<p class="cq">' + a.t + '</p><p class="ca">&mdash; ' + a.a + '</p>';
+    carEl.appendChild(s);
+    
+    var d = document.createElement('button');
+    d.className = 'dot' + (i === 0 ? ' active' : '');
+    d.setAttribute('aria-label', 'Avis ' + (i + 1));
+    (function(n) { d.onclick = function() { goTo(n); }; })(i);
+    dtsEl.appendChild(d);
+  });
+  
+  function goTo(n) {
+    var slides = document.querySelectorAll('.csl');
+    var dots = document.querySelectorAll('.dot');
+    if (slides.length === 0) return;
+    slides[cur].classList.remove('active');
+    dots[cur].classList.remove('active');
+    cur = (n + avis.length) % avis.length;
+    slides[cur].classList.add('active');
+    dots[cur].classList.add('active');
+    clearInterval(tmr);
+    tmr = setInterval(function() { goTo(cur + 1); }, 6000);
+  }
+  
+  var prevBtn = document.getElementById('cprev');
+  var nextBtn = document.getElementById('cnext');
+  if (prevBtn) prevBtn.onclick = function() { goTo(cur - 1); };
+  if (nextBtn) nextBtn.onclick = function() { goTo(cur + 1); };
+  
+  tmr = setInterval(function() { goTo(cur + 1); }, 6000);
+});
+
+// FORMULAIRE
+document.getElementById('rdvForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  var ok = true;
+  
+  var chk = [
+    {i:'f-pr',g:'fg-pr',fn:function(v){return v.trim()!==''}},
+    {i:'f-nm',g:'fg-nm',fn:function(v){return v.trim()!==''}},
+    {i:'f-dn',g:'fg-dn',fn:function(v){return v.trim()!==''}},
+    {i:'f-tl',g:'fg-tl',fn:function(v){return v.trim()!==''}},
+    {i:'f-em',g:'fg-em',fn:function(v){return /^[^@]+@[^@]+\.[^@]+$/.test(v)}}
+  ];
+  
+  chk.forEach(function(c){
+    var inp=document.getElementById(c.i),grp=document.getElementById(c.g);
+    if(!c.fn(inp.value)){grp.classList.add('err');ok=false;}else{grp.classList.remove('err');}
+  });
+  if(!ok)return;
+  
+  var btn=document.getElementById('rdv-btn');
+  var originalText=btn.textContent;
+  btn.textContent='Envoi en cours...';
+  btn.disabled=true;
+  
+  var fd=new FormData(this);
+  
+  try {
+    var r=await fetch('https://formspree.io/f/xyklbaql',{method:'POST',body:fd,headers:{Accept:'application/json'}});
+    if(r.ok){
+      btn.style.display='none';
+      document.getElementById('rdv-conf').style.display='block';
+      this.reset();
+      setTimeout(function(){
+        document.getElementById('rdv-conf').style.display='none';
+        btn.style.display='block';
+        btn.textContent=originalText;
+        btn.disabled=false;
+      },5000);
+    }else{
+      throw new Error('Erreur '+r.status);
+    }
+  }catch(err){
+    btn.textContent=originalText;
+    btn.disabled=false;
+    alert('❌ Erreur : Impossible d\'envoyer. Veuillez nous contacter par email ou téléphone.');
+  }
+});
+</script>
+</body>
+</html>
