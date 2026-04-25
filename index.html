@@ -685,7 +685,7 @@ document.addEventListener('DOMContentLoaded', function() {
   tmr = setInterval(function() { goTo(cur + 1); }, 6000);
 });
 
-// FORMULAIRE
+// FORMULAIRE - Version email direct
 document.getElementById('rdvForm').addEventListener('submit', function(e) {
   e.preventDefault();
   var ok = true;
@@ -709,7 +709,6 @@ document.getElementById('rdvForm').addEventListener('submit', function(e) {
   btn.textContent='Envoi en cours...';
   btn.disabled=true;
   
-  // Récupération des données
   var prenom = document.getElementById('f-pr').value;
   var nom = document.getElementById('f-nm').value;
   var dn = document.getElementById('f-dn').value;
@@ -719,30 +718,23 @@ document.getElementById('rdvForm').addEventListener('submit', function(e) {
   var dispo = document.getElementById('f-dispo').value;
   var message = document.getElementById('f-msg').value;
   
-  // Construction de l'email
   var sujet = encodeURIComponent('RDV Espace MB - ' + prenom + ' ' + nom);
   var corps = encodeURIComponent(
-    "NOUVELLE DEMANDE DE RENDEZ-VOUS\n" +
-    "================================\n\n" +
-    "📅 Date : " + new Date().toLocaleString('fr-FR') + "\n\n" +
-    "--- COORDONNÉES ---\n" +
+    "DEMANDE DE RENDEZ-VOUS\n" +
+    "==================\n\n" +
+
     "👤 Prénom : " + prenom + "\n" +
     "👤 Nom : " + nom + "\n" +
     "🎂 Date naissance : " + dn + "\n" +
     "📞 Téléphone : " + tel + "\n" +
     "✉️ Email : " + email + "\n\n" +
-    "--- DEMANDE ---\n" +
     "💆 Massage souhaité : " + massage + "\n\n" +
     "📅 Disponibilités :\n" + dispo + "\n\n" +
-    "📝 Message :\n" + (message || "(aucun)") + "\n\n" +
-    "--- À traiter ---\n" +
-    "Merci de contacter le client dans les plus brefs délais."
+    "📝 Message :\n" + (message || "(aucun)")
   );
   
-  // Ouverture de l'appli email
   window.location.href = 'mailto:marielle.bouss@outlook.fr?subject=' + sujet + '&body=' + corps;
   
-  // Afficher le message de confirmation
   btn.style.display = 'none';
   document.getElementById('rdv-conf').style.display = 'block';
   this.reset();
@@ -753,7 +745,7 @@ document.getElementById('rdvForm').addEventListener('submit', function(e) {
     btn.textContent = originalText;
     btn.disabled = false;
   }, 5000);
-});;
+});
 </script>
 </body>
 </html>
