@@ -91,9 +91,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,253,248,
 .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 60% 40%,rgba(255,255,255,.18) 0%,transparent 65%)}
 .herc{position:relative;z-index:2;padding:2rem}
 .hertag{font-family:var(--serif);font-size:.88rem;letter-spacing:.28em;text-transform:uppercase;color:#7a5800;margin-bottom:1.5rem}
-.herh{font-family:var(--serif);font-size:clamp(2.2rem,5vw,4rem);font-weight:300;color:#2a1a00;line-height:1.2;margin-bottom:1rem;max-width:680px}
+.herh{font-family:'Playfair Display', serif;;font-size:clamp(2.2rem,5vw,4rem);font-weight:300;color:#2a1a00;line-height:1.2;margin-bottom:1rem;max-width:680px}
 .herh strong{font-weight:600;color:#7a4a00}
-.hersub{color:#4a3800;font-size:1.05rem;margin-bottom:2.5rem;max-width:540px;line-height:1.75}
+.hersub{color:#4a3800;font-size:1.2rem;margin-bottom:2.5rem;max-width:540px;line-height:1.75}
 .herbtn{display:inline-block;background:#7a4a00;color:#fff;font-family:var(--serif);font-size:.82rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:1rem 2.8rem;border:1px solid var(--accent);transition:background .25s,color .25s}
 .herbtn:hover{background:transparent;color:#7a4a00;border-color:#7a4a00}
 
@@ -108,7 +108,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,253,248,
 .sph img{width:100%;height:100%;object-fit:cover}
 .sc:hover .sph{transform:translateY(-5px);box-shadow:0 8px 20px rgba(212,160,48,0.25)}
 .sc:hover .sph img{transform:scale(1.05)}
-.sn{font-family:var(--serif);font-size:1rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text);margin-bottom:.4rem}
+.sn{font-family:var(--serif);font-size:1.12rem;font-weight:700;letter-spacing:.10em;text-transform:uppercase;color:var(--text);margin-bottom:.4rem}
 .ss{font-size:1rem;color:var(--muted);margin-bottom:.9rem}
 .sl{font-family:var(--serif);font-size:.9rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);border-bottom:1px solid var(--accent);padding-bottom:1px}
 
@@ -119,7 +119,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,253,248,
 .acirc:hover{box-shadow:0 6px 30px rgba(212,160,48,.3)}
 .acirc svg{width:54px;height:54px;stroke:var(--accent);fill:none;stroke-width:1.2}
 .acirc img{width:100%;height:100%;object-fit:cover}
-.atext{font-size:.95rem;line-height:1.9;font-style:italic;color:var(--text)}
+.atext{font-size:.1.1rem;line-height:1.9;font-style:normal;color:var(--text)}
 .atext strong{font-style:normal;font-weight:600}
 .amore{display:inline-block;margin-top:1rem;font-family:var(--serif);font-size:.82rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);border-bottom:1px solid var(--accent);padding-bottom:1px;cursor:pointer}
 
@@ -447,16 +447,16 @@ footer{background:#e8c060;border-top:1px solid rgba(0,0,0,.08);padding:2.5rem 3r
     <div class="bar"></div>
     <form class="form" id="rdvForm" novalidate>
       <div class="fr">
-        <div class="fg" id="fg-pr"><label>Prenom <span class="req">*</span></label><input type="text" id="f-pr" placeholder="Votre prenom"><span class="errmsg">Champ obligatoire.</span></div>
+        <div class="fg" id="fg-pr"><label>Prenom <span class="req">*</span></label><input type="text" id="f-pr" placeholder="Votre prénom"><span class="errmsg">Champ obligatoire.</span></div>
         <div class="fg" id="fg-nm"><label>Nom <span class="req">*</span></label><input type="text" id="f-nm" placeholder="Votre nom"><span class="errmsg">Champ obligatoire.</span></div>
       </div>
       <div class="fr">
-        <div class="fg" id="fg-dn"><label>Date de naissance <span class="req">*</span></label><input type="date" id="f-dn"><span class="errmsg">Champ obligatoire.</span></div>
-        <div class="fg" id="fg-tl"><label>Telephone <span class="req">*</span></label><input type="tel" id="f-tl" placeholder="06 00 00 00 00"><span class="errmsg">Champ obligatoire.</span></div>
+        <div class="fg" id="fg-dn"><label>Date de naissance <span class="req">*</span></label><input type="text" id="f-dn" placeholder="JJ/MM/AAAA"><span class="errmsg">Champ obligatoire. Format JJ/MM/AAAA</span></div>
+        <div class="fg" id="fg-tl"><label>Téléphone <span class="req">*</span></label><input type="tel" id="f-tl" placeholder="Votre numéro"><span class="errmsg">Champ obligatoire.</span></div>
       </div>
       <div class="fg" id="fg-em"><label>Email <span class="req">*</span></label><input type="email" id="f-em" placeholder="votre@email.com"><span class="errmsg">Email invalide.</span></div>
       <div class="fg">
-        <label>Massage souhaite</label>
+        <label>Massage souhaité</label>
         <select id="f-ms">
           <option value="">Choisir...</option>
           <option>Massage Zero Tension : Dos 45min (45&euro;)</option>
@@ -466,8 +466,8 @@ footer{background:#e8c060;border-top:1px solid rgba(0,0,0,.08);padding:2.5rem 3r
           <option>Massage Sportif : 45min (50&euro;)</option>
         </select>
       </div>
-      <div class="fg"><label>Vos disponibilites (ouvert de 14h a 19h)</label><textarea id="f-dispo" placeholder="Indiquez vos jours et creneaux preferes..."></textarea></div>
-      <div class="fg"><label>Message (facultatif)</label><textarea id="f-msg" placeholder="Questions, informations complementaires..."></textarea></div>
+      <div class="fg"><label>Vos disponibilités (ouvert de 14h a 19h)</label><textarea id="f-dispo" placeholder="Indiquez vos jours et créneaux préférés... (Ouvert du lundi au vendredi 14h - 19h)"></textarea></div>
+      <div class="fg"><label>Message (facultatif)</label><textarea id="f-msg" placeholder="Questions, informations complémentaires..."></textarea></div>
       <button type="submit" class="bsub" id="rdv-btn">Envoyer la demande</button>
       <div class="fconf" id="rdv-conf">
         <strong>Demande envoyée !</strong>
@@ -529,13 +529,27 @@ footer{background:#e8c060;border-top:1px solid rgba(0,0,0,.08);padding:2.5rem 3r
 
 <script>
 // FONCTIONS MODALES
-function op(id){document.getElementById(id).classList.add('open');document.body.style.overflow='hidden';document.getElementById('navLinks').classList.remove('open')}
-function cl(id){document.getElementById(id).classList.remove('open');document.body.style.overflow=''}
+function op(id){
+  document.getElementById(id).classList.add('open');
+  document.body.style.overflow='hidden';
+  document.getElementById('navLinks').classList.remove('open');
+  history.pushState({overlay: id}, '', '#' + id);
+}
+function cl(id){
+  document.getElementById(id).classList.remove('open');
+  document.body.style.overflow='';
+  if(location.hash === '#' + id) history.back();
+}
 function goRdv(id){cl(id);setTimeout(function(){document.getElementById('rdv').scrollIntoView({behavior:'smooth'})},300)}
 
 // FERMETURE ESCAPE
 document.addEventListener('keydown',function(e){if(e.key==='Escape'){document.querySelectorAll('.ov.open').forEach(function(p){p.classList.remove('open')});document.body.style.overflow=''}});
-
+window.addEventListener('popstate', function(e){
+  document.querySelectorAll('.ov.open').forEach(function(p){
+    p.classList.remove('open');
+  });
+  document.body.style.overflow='';
+});
 // BOUTONS FERMETURE
 document.getElementById('c-qs').onclick=function(){cl('pg-qs')};
 document.getElementById('c-zt').onclick=function(){cl('pg-zt')};
