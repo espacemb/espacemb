@@ -202,7 +202,40 @@ footer{background:#e8c060;border-top:1px solid rgba(0,0,0,.08);padding:2.5rem 3r
   .map-container iframe{height:250px}
   .di,.qsp{margin-bottom:1rem}
   img{max-width:100%;height:auto}
+
+   /* Réduction du hero sur mobile */
+  .hero {
+    margin-top: 70px;
+    height: auto;  /* Au lieu de 100vh */
+    min-height: 380px;  /* Réduit de 520px à 380px */
+    padding: 1rem 0;
+  }
   
+  .herc {
+    padding: 1rem;
+  }
+  
+  .herh {
+    font-size: clamp(1.6rem, 6vw, 2.2rem);  /* Titre plus petit */
+    margin-bottom: 0.5rem;
+  }
+  
+  .hertag {
+    font-size: 0.7rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .hersub {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+  }
+  
+  .herbtn {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.7rem;
+  }
+}
   /* Fallback images */
   img[src=""] { display: none; }
   .sph img, .di img, .qsp img, .acirc img {
