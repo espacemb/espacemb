@@ -522,8 +522,7 @@ footer{background:#e8c060;border-top:1px solid rgba(0,0,0,.08);padding:2.5rem 3r
       <div class="fg"><label>Message (facultatif)</label><textarea id="f-msg" placeholder="Questions, informations complémentaires..."></textarea></div>
       <button type="submit" class="bsub" id="rdv-btn">Envoyer la demande</button>
       <div class="fconf" id="rdv-conf">
-        <strong>Demande envoyée !</strong>
-        Marielle vous contactera très bientôt pour confirmer votre rendez-vous.
+        <strong>Redirection par mail</strong>
       </div>
     </form>
   </div>
@@ -722,21 +721,18 @@ document.getElementById('rdvForm').addEventListener('submit', function(e) {
   // Construction de l'email
   var sujet = encodeURIComponent('RDV Espace MB - ' + prenom + ' ' + nom);
   var corps = encodeURIComponent(
-    "NOUVELLE DEMANDE DE RENDEZ-VOUS\n" +
-    "================================\n\n" +
-    "📅 Date : " + new Date().toLocaleString('fr-FR') + "\n\n" +
-    "--- COORDONNÉES ---\n" +
+    "DEMANDE DE RENDEZ-VOUS\n" +
+    "====================\n\n" +
+
     "👤 Prénom : " + prenom + "\n" +
     "👤 Nom : " + nom + "\n" +
     "🎂 Date naissance : " + dn + "\n" +
     "📞 Téléphone : " + tel + "\n" +
     "✉️ Email : " + email + "\n\n" +
-    "--- DEMANDE ---\n" +
     "💆 Massage souhaité : " + massage + "\n\n" +
     "📅 Disponibilités :\n" + dispo + "\n\n" +
     "📝 Message :\n" + (message || "(aucun)") + "\n\n" +
-    "--- À traiter ---\n" +
-    "Merci de contacter le client dans les plus brefs délais."
+
   );
   
   // Ouverture de l'appli email
