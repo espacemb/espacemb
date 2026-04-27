@@ -710,8 +710,8 @@ document.addEventListener('DOMContentLoaded', function() {
   tmr = setInterval(function() { goTo(cur + 1); }, 6000);
 });
 
-// FORMULAIRE - Version email direct
-document.getElementById('rdvForm').addEventListener('submit', function(e) {
+// FORMULAIRE - Version Web3Forms (recommendée)
+document.getElementById('rdvForm').addEventListener('submit', async function(e) {
   e.preventDefault();
   var ok = true;
   
@@ -734,42 +734,45 @@ document.getElementById('rdvForm').addEventListener('submit', function(e) {
   btn.textContent='Envoi en cours...';
   btn.disabled=true;
   
-  var prenom = document.getElementById('f-pr').value;
-  var nom = document.getElementById('f-nm').value;
-  var dn = document.getElementById('f-dn').value;
-  var tel = document.getElementById('f-tl').value;
-  var email = document.getElementById('f-em').value;
-  var massage = document.getElementById('f-ms').value;
-  var dispo = document.getElementById('f-dispo').value;
-  var message = document.getElementById('f-msg').value;
+  // Envoi via Web3Forms (gratuit)
+  var formData = {
+    access_key: '6ef0a63b-ffa0-4bbb-a34d-20ee2b6ecd2a', // À créer sur web3forms.com
+    name: document.getElementById('f-pr').value + ' ' + document.getElementById('f-nm').value,
+    email: document.getElementById('f-em').value,
+    phone: document.getElementById('f-tl').value,
+    birthdate: document.getElementById('f-dn').value,
+    massage: document.getElementById('f-ms').value,
+    availability: document.getElementById('f-dispo').value,
+    message: document.getElementById('f-msg').value,
+    subject: 'Nouvelle demande de RDV - Espace MB'
+  };
   
-  var sujet = encodeURIComponent('RDV Espace MB - ' + prenom + ' ' + nom);
-  var corps = encodeURIComponent(
-    "DEMANDE DE RENDEZ-VOUS\n" +
-    "==================\n\n" +
-
-    "👤 Prénom : " + prenom + "\n" +
-    "👤 Nom : " + nom + "\n" +
-    "🎂 Date naissance : " + dn + "\n" +
-    "📞 Téléphone : " + tel + "\n" +
-    "✉️ Email : " + email + "\n\n" +
-    "💆 Massage souhaité : " + massage + "\n\n" +
-    "📅 Disponibilités :\n" + dispo + "\n\n" +
-    "📝 Message :\n" + (message || "(aucun)")
-  );
-  
-  window.location.href = 'mailto:marielle.bouss@outlook.fr?subject=' + sujet + '&body=' + corps;
-  
-  btn.style.display = 'none';
-  document.getElementById('rdv-conf').style.display = 'block';
-  this.reset();
-  
-  setTimeout(function(){
-    document.getElementById('rdv-conf').style.display = 'none';
-    btn.style.display = 'block';
+  try {
+    var response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData)
+    });
+    var result = await response.json();
+    
+    if(result.success){
+      btn.style.display = 'none';
+      document.getElementById('rdv-conf').style.display = 'block';
+      document.getElementById('rdvForm').reset();
+      setTimeout(function(){
+        document.getElementById('rdv-conf').style.display = 'none';
+        btn.style.display = 'block';
+        btn.textContent = originalText;
+        btn.disabled = false;
+      }, 5000);
+    } else {
+      throw new Error('Erreur');
+    }
+  } catch(err) {
     btn.textContent = originalText;
     btn.disabled = false;
-  }, 5000);
+    alert('❌ Erreur. Veuillez réessayer ou nous contacter par téléphone.');
+  }
 });
 </script>
 </body>
